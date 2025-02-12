@@ -3,5 +3,7 @@ const todoList = document.querySelector("#todoList");
 const addBtn = document.querySelector("#addBtn");
 
 addBtn.addEventListener("click", () => {
-    alert();
+    const listItem = document.createElement("li");
+    listItem.textContent = todoText.value;
+    todoList.append(listItem);
 }); 
