@@ -15,7 +15,11 @@
         <!-- link -->
         <a :target="youtube.target"
          :href="youtube.url"
+         :alt="youtube.context" 
+         :kereciyasin="owner"
          >{{youtube.context}}</a> 
+
+         <button v-on:click="changeTitle">Title change..</button>
     </div>
 
     <script src="/1-vue-instance/app.js"></script>

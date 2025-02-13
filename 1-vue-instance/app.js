@@ -7,7 +7,14 @@ const app = Vue.createApp({
                 url : "https://www.youtube.com/?hl=TR",
                 target: "_blank",
                 context: "Please, for Youtube",
+                alt: "bootcmap youtube",
             },
+            owner: "Brandon Sanderson", 
         };
     },
+    methods: {
+        changeTitle(){
+            alert();
+        }
+    }
  }).mount('#app');  // mount the app to the div with id app   
