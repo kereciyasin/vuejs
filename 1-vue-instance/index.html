@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="app">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
 
-        <h1>{{title}}</h1>
-        <p> {{content}}</p>
+      <!-- Link -->
+      <a :target="youtube.target" :href="youtube.url">
+        {{ youtube.context }}
+      </a>
 
-        <!-- link -->
-        <a :target="youtube.target"
-         :href="youtube.url"
-         :alt="youtube.context" 
-         :kereciyasin="owner"
-         >{{youtube.context}}</a> 
+      <br /><br />
 
-         <button v-on:click="changeTitle">Title change..</button>
+      <button v-on:click="changeTitle('1. Button')">Title change..</button>
+      <button v-on:click="changeTitle('2.')">Title 2 change..</button>
+
+      <div @mousemove="updateCoords" class="box" @click="chanceTitle('Box..')"></div>
+      <span>45,67</span>
     </div>
 
-    <script src="/1-vue-instance/app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
