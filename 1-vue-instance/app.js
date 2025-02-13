@@ -10,14 +10,19 @@ const app = Vue.createApp({
         context: "Please, for Youtube",
       },
       owner: "Brandon Sanderson",
+      coords: { x: 0, y: 0 },
     };
   },
   methods: {
     changeTitle(pTitle) {
       this.title = pTitle;
     },
-    updateCoords(event) {  
-      console.log(event.x, event.y);   
+    updateCoords(message, event) {  
+      console.log(message, event.x, event.y);  
+      this.coords ={
+        x: event.x,
+        y: event.y  
+      } 
     },
   },
 }).mount("#app");
